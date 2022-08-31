@@ -37,7 +37,11 @@ export class R {
           if (timeout) {
             timeoutReference = setTimeout(() => {
               childProcess.kill();
-              throw new Error("Rscript process timeout");
+              try {
+                throw new Error("Rscript process timeout");
+              } catch (error: any) {
+                reject(error);
+              }
             }, timeout);
           }
 
@@ -47,7 +51,7 @@ export class R {
             body += data.toString();
           });
 
-          childProcess.stdout.on("close", () => {
+          childProcess.stdout.once("close", () => {
             if (timeout) clearTimeout(timeoutReference);
             resolve(body);
           });

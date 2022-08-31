@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { R } from "../";
 
-var attitude = JSON.parse(
+const attitude = JSON.parse(
   require("fs").readFileSync("example/attitude.json", "utf8")
 );
 

@@ -1,0 +1,12 @@
+{
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+  },
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2020",
+    "removeComments": true,
+    "esModuleInterop": true,
+  }
+}
