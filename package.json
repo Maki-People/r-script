@@ -1,24 +1,27 @@
 {
   "name": "r-script",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A simple little module for passing data from NodeJS to R (and back again).",
   "keywords": [
     "R",
     "rstats",
     "statistics"
   ],
-  "homepage": "http://github.com/joshkatz/r-script",
-  "bugs": "http://github.com/joshkatz/r-script/issues",
+  "homepage": "http://github.com/Maki-People/r-script",
+  "bugs": "http://github.com/Maki-People/r-script/issues",
   "license": "MIT",
   "author": {
     "name": "Josh Katz"
   },
+  "maintainers": [
+    "Jerome Duval"
+  ],
   "main": "index.js",
-  "repository": "joshkatz/r-script",
-  "dependencies": {
-    "underscore": "^1.8.3"
-  },
+  "repository": "Maki-People/r-script",
   "devDependencies": {
-    "queue-async": "^1.0.7"
+    "@types/node": "~18.7.14",
+    "queue-async": "^1.0.7",
+    "ts-node": "~10.9.1",
+    "typescript": "~4.8.2"
   }
 }
