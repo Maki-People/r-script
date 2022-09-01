@@ -20,6 +20,10 @@ npm install @maki-people/r-script
 //   { group: '(70,85]', rating: 77.2, advance: 45.5 } ]
 ```
 
+### Build
+
+`npm run build`
+
 ### Test
 
 `npm run test`
