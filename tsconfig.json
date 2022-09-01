@@ -8,5 +8,11 @@
     "target": "es2020",
     "removeComments": true,
     "esModuleInterop": true,
-  }
+    "strict": true,
+    "incremental": true,
+    "declaration": true,
+  },
+  "include": [
+    "src"
+  ]
 }

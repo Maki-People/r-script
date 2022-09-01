@@ -1,6 +1,6 @@
 {
   "name": "@maki-people/r-script",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple little module for passing data from NodeJS to R (and back again).",
   "keywords": [
     "R",
@@ -16,7 +16,7 @@
   "maintainers": [
     "Jerome Duval"
   ],
-  "main": "index.ts",
+  "main": "index.js",
   "repository": "Maki-People/r-script",
   "devDependencies": {
     "@types/jest": "~29.0.0",
@@ -28,6 +28,7 @@
     "typescript": "~4.8.2"
   },
   "scripts": {
+    "build": "npx tsc",
     "test": "jest"
   }
 }

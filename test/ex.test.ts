@@ -1,4 +1,4 @@
-import { R } from "../";
+import { R } from "../src";
 
 const attitude = JSON.parse(
   require("fs").readFileSync("example/attitude.json", "utf8")
@@ -9,7 +9,6 @@ describe("R script runner", () => {
     const RInstance = new R("example/ex.R");
     RInstance.data({ df: attitude, nGroups: 3, fxn: "mean" });
     const result = await RInstance.execute();
-
     expect(JSON.parse(result)).toMatchObject([
       { group: "(40,55]", rating: 46.7143, advance: 41.1429 },
       { group: "(55,70]", rating: 64.6154, advance: 41.9231 },

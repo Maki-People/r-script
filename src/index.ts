@@ -2,11 +2,11 @@ import * as child_process from "child_process";
 
 export class R {
   path: string;
-  arguments = {};
+  arguments: { number?: unknown } = {};
   command = "Rscript";
   commandArgs = ["--vanilla", __dirname + "/R/launch.R"];
   options = {
-    env: { DIRNAME: __dirname, ...process.env },
+    env: { DIRNAME: __dirname, ...process.env, input: "" },
     encoding: "utf8",
   };
 
@@ -16,7 +16,7 @@ export class R {
 
   data(...args: unknown[]) {
     for (let i = 0; i < args.length; i++) {
-      this.arguments[i] = args[i];
+      this.arguments[i as unknown as keyof typeof this.arguments] = args[i];
     }
   }
 
