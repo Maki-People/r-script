@@ -1,6 +1,6 @@
 {
   "name": "@maki-people/r-script",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple little module for passing data from NodeJS to R (and back again).",
   "keywords": [
     "R",
@@ -29,7 +29,9 @@
     "typescript": "~4.8.2"
   },
   "scripts": {
-    "build": "npx tsc",
+    "build": "npm run clean && npx tsc && npm run copy-R-files",
+    "clean": "rm -rf ./dist",
+    "copy-R-files": "mkdir ./dist/R && cp ./src/R/* ./dist/R/",
     "test": "jest"
   }
 }

@@ -1,4 +1,4 @@
-source(file.path(Sys.getenv("DIRNAME"), "needs.R"))
+source(file.path(Sys.getenv("DIRNAME"), "./R/needs.R"))
 needs(jsonlite)
 
 run <- function(data_in) {
