@@ -57,7 +57,11 @@ export class R {
           });
 
           childProcess.stderr.on("data", (data) => {
-            throw new Error(data.toString());
+            try {
+              throw new Error(data.toString());
+            } catch (error: any) {
+              reject(error);
+            }
           });
         } catch (error: any) {
           reject(error);

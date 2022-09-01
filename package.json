@@ -1,6 +1,6 @@
 {
   "name": "@maki-people/r-script",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple little module for passing data from NodeJS to R (and back again).",
   "keywords": [
     "R",
